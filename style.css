@@ -1,5 +1,7 @@
 .card-product {
   background-color: pink;
+  display: flex;
+  gap: 10px;
 }
 
 .card {
@@ -8,7 +10,13 @@
     margin: 16px;
     background-color: brown;
     display: flex;
+    flex-direction: column;
     color: white;
     align-items: center;
     justify-content: center;
+    border: 1px solid black;
+}
+
+.card-img {
+    width: 100%;
 }

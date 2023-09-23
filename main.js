@@ -2,6 +2,26 @@ const app = Vue.createApp({
     template:``,
     data() {
         return {
+            products: [
+                {
+                    name: 'SP 1',
+                    price: 120,
+                    img: './assets/img.png',
+                    isCart: true,
+                },
+                {
+                    name: 'SP 2',
+                    price: 115,
+                    img: './assets/img.png',
+                    isCart: true,
+                },
+                {
+                    name: 'SP 3',
+                    price: 320,
+                    img: './assets/img.png',
+                    isCart: true,
+                },
+            ],
             x: 0,
             y: 0,
         }

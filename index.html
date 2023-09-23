@@ -10,6 +10,13 @@
     <h1>hello vue.js</h1>
     <section id="contact">
         <div class="card-product">
+            <div class="card" v-for="product in products">
+                <img v-bind:src="product.img" alt="img product" class="card-img">
+                <h1>{{ product.name }}</h1>
+                <h2>{{ product.price }}</h2>
+            </div>
+        </div>
+        <div class="card-product">
             <div class="card" @mouseover="onLogEvent">Mouse over</div>
             <div class="card" @mouseleave="onLogEvent">Mouse leave</div>
             <div class="card" @dblclick="onLogEvent($e, 100, 100)">Double click</div>
