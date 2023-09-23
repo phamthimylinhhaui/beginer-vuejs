@@ -41,6 +41,13 @@ const app = Vue.createApp({
             this.y = e.offsetY;
         },
     },
+    computed: {
+        productFilter() {
+            return this.products.filter(
+                (product) => product.price < 200
+            )
+        }
+    }
 });
 
 app.mount('#contact');
