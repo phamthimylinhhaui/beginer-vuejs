@@ -9,8 +9,14 @@
 <body>
     <h1>hello vue.js</h1>
     <section id="contact">
-        <div class="card-product">
-            <div class="card" v-for="product in products">
+        <div class="card-product" :class="bindClass">
+            <div
+                class="card" 
+                v-for="product in products"
+                :style="{ color: product.isCart ? 'black' : ''}"
+                :class="{ cart: product.isCart }"
+                @dblclick="onToggleCart($e, product)"
+            >
                 <img v-bind:src="product.img" alt="img product" class="card-img">
                 <h1>{{ product.name }}</h1>
                 <h2>{{ product.price }}</h2>

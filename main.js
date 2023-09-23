@@ -13,7 +13,7 @@ const app = Vue.createApp({
                     name: 'SP 2',
                     price: 115,
                     img: './assets/img.png',
-                    isCart: true,
+                    isCart: false,
                 },
                 {
                     name: 'SP 3',
@@ -24,9 +24,13 @@ const app = Vue.createApp({
             ],
             x: 0,
             y: 0,
+            bindClass: 'bind-class',
         }
     },
     methods: {
+        onToggleCart(e, product) {
+            product.isCart = !product.isCart;
+        },
         onLogEvent(e, xDefautl, yDefautl) {
             console.log(e);
             this.x = xDefautl;
