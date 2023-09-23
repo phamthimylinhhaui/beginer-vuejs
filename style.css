@@ -1,0 +1,14 @@
+.card-product {
+  background-color: pink;
+}
+
+.card {
+    width: 200px;
+    min-height: 200px;
+    margin: 16px;
+    background-color: brown;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}

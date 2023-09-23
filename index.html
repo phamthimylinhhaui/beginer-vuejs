@@ -4,11 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>hello vue.js</h1>
     <section id="contact">
-        
+        <div class="card-product">
+            <div class="card" @mouseover="onLogEvent">Mouse over</div>
+            <div class="card" @mouseleave="onLogEvent">Mouse leave</div>
+            <div class="card" @dblclick="onLogEvent($e, 100, 100)">Double click</div>
+            <div class="card" @mousemove="onMouseMoveEvent">Double click
+                Vi tri: {{ `${x} - ${y}`}}
+            </div>
+        </div>
     </section>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
